@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Record } from '../record.model'
+import { Record } from '../grid/record.model'
 
 @Component({
   selector: 'app-details',

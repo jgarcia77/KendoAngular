@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { GridColumn } from './gridColumn.model';
-import { Record } from './record.model'
+import { GridColumn } from './grid/gridColumn.model';
+import { Record } from './grid/record.model'
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
