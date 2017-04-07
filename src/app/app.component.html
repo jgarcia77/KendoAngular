@@ -1,3 +1,20 @@
-<h1>
-  {{title}}
-</h1>
+<div class="container">
+  <div>
+    <h1>{{ title }}</h1>
+  </div>
+  <div>
+    <button kendoButton [primary]="true" (click)="buttonClicked()">Don't Click Me!</button>
+  </div>
+  <kendo-grid [data]="gridData">
+      <kendo-grid-column *ngFor="let gridColumn of gridColumns"
+        [field]="gridColumn.field" 
+        [title]="gridColumn.title" 
+        [width]="gridColumn.width">
+      </kendo-grid-column>
+
+      <div *kendoGridDetailTemplate="let dataItem">
+          Coming soon...
+      </div>
+
+  </kendo-grid>
+</div>
