@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { GridColumn } from './gridColumn.model';
-
+import { Record } from './record.model'
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -16,37 +16,39 @@ export class AppComponent {
     new GridColumn("Discontinued", "Discontinued", "120")
   ];
 
-  gridData: any[] = [{  
-        "ProductID": 1,  
-        "ProductName": "Chai",  
-        "UnitPrice": 18.0000,  
-        "Discontinued": true  
-    }, {  
-        "ProductID": 2,  
-        "ProductName": "Chang",  
-        "UnitPrice": 19.0000,  
-        "Discontinued": false  
-    }, {  
-        "ProductID": 3,  
-        "ProductName": "Aniseed Syrup",  
-        "UnitPrice": 10.0000,  
-        "Discontinued": false  
-    }, {  
-        "ProductID": 4,  
-        "ProductName": "Chef Anton's Cajun Seasoning",  
-        "UnitPrice": 22.0000,  
-        "Discontinued": false  
-    }, {  
-        "ProductID": 5,  
-        "ProductName": "Chef Anton's Gumbo Mix",  
-        "UnitPrice": 21.3500,  
-        "Discontinued": false  
-    }, {  
-        "ProductID": 6,  
-        "ProductName": "Grandma's Boysenberry Spread",  
-        "UnitPrice": 25.0000,  
-        "Discontinued": false  
-    }];
+  gridData: Record[] = [
+    new Record(
+        1,  
+        "Chai",  
+        18.0000,  
+        true), 
+    new Record(  
+        2,  
+        "Chang",  
+        19.0000,  
+        false), 
+    new Record(  
+        3,  
+        "Aniseed Syrup",  
+        10.0000,  
+        false),
+    new Record(  
+        4,  
+        "Chef Anton's Cajun Seasoning",  
+        22.0000,  
+        false), 
+    new Record(  
+        5,  
+        "Chef Anton's Gumbo Mix",  
+        21.3500,  
+        false  
+    ), 
+    new Record(  
+        6,  
+        "Grandma's Boysenberry Spread",  
+        25.0000,  
+        false  
+    )];
 
   // Kendo UI Button click event handler
   buttonClicked() {
